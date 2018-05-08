@@ -1,0 +1,27 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{titlesec}    
+\titleformat{\chapter}[display]
+{\normalfont%
+	\large% %change this size to your needs for the first line
+	\bfseries}{\chaptertitlename\ \thechapter}{10pt}{%
+	\large %change this size to your needs for the second line
+}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{float}
+\renewcommand{\chaptername}{Practical}
+\usepackage{mathptmx}
+\titleformat*{\section}{\MEDIUM\bfseries}
+\titleformat*{\subsection}{\MEDIUM\bfseries}
+
+\begin{document}
+	\input{practical1}
+	\input{practical2}
+	\input{practical3}
+	\input{practical4}
+	\input{practical5}
+\end{document} 

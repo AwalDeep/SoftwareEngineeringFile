@@ -1,0 +1,53 @@
+\chapter{Prepare Software Requirement Specification document for Text Analysis}
+\label{Practical:3}
+\section{Introduction}
+\subsection{Purpose}
+The purpose of this document is to outline the requirements which the Text classifier application must meet. The audience of this document includes: project developers and customers, and users who wish to view the project requirements and specifications.
+\subsection{Scope}
+This purpose of this project is to develop an automated way of gauging the sentiment of any topic based on social media, specifically Twitter. The software should determine the sentiment of the Twitter community with respect to a given topic, without looking at it manually. The product name will be Text classifier.
+\subsection{References}
+\begin{itemize}
+\item Developer Terms of Service: https://dev.twitter.com/terms/api-terms 
+\end{itemize}
+\subsection{Overview}
+The remaining sections of this document will cover an overall description of this software, as well as requirements and specifications for the software. The overall description of the software is a reference for users, and the detailed specifications and requirements should guide development
+\section{System description}
+\subsection{Product perspective}
+The Text classifier  software  will  take  tweets   as input. However, only one topic    will be analyzed at a time, determining the mood of the Twitter community towards that topic. The application and output will be developed.\\
+The intended user will be a member of the general public who is interested in the sentiment of the Twitter population with respect to various topics. \\
+Twitter does not return any information about the user which that user has not made public. Any personal information that is collected from Twitter will not be stored or used in any way.
+
+\subsection{Assumptions and Dependencies}
+An assumption is that it is not possible to accurately determine the sentiment     for a  140    character string of English text.\\
+Internet access is required for each analysis session to work properly
+
+\section{Functional requirements}
+\subsection{Retrieving Input}
+The software will receive three inputs: keywords, analysis session duration, and Tweets.
+\begin{itemize}
+	\item Keywords will be entered by the user for each topic.
+	\item The analysis session duration will be set by the user before each session.
+	\item Tweets will be retrieved with the Twitter Streaming API.
+	 
+\end{itemize}
+\subsection{Real-Time Processing}
+The software will take input, process data, and display output in real-time. This will enforce that the snapshot provided by the simple gauge is a current view of the Twitter community's mood on the chosen topic.\\
+The software will generate polarity and classify the text in real time.
+\subsection{Sentiment Analysis}
+Sentiment analysis will be performed on the user-specified keywords within the Tweet to determine the overall mood of the Tweet relative to the topic. The sentiment analysis will provide a negative, neutral, or positive numeric sentiment value.
+\subsection{Output}
+The software must output real time data in the form of a simple gauge. In addition, the software may output a graph of polarity trends over time, as well as additional statistics pertaining to a topic (average sentiment over all analysis sessions and total number of tweets processed). This output should be clear and easy to understand.
+
+
+\section{Non-Functional requirements}
+\subsection{Reliability}
+The software will meet all of the functional requirements without any unexpected behavior. At no time should the gauge output display incorrect or outdated information without alerting the user to potential errors.
+\subsection{Availabiity}
+The software will be available at all times on the user’s Android device, as long as the device is in proper working order. The functionality of the software will depend on any external services such as internet access that are required. If those services are unavailable, the user should be alerted.
+\subsection{Security}
+The software should never disclose any personal information of Twitter users, and should collect no personal information from its own users.
+\subsection{Maintainability}
+The software should be written clearly and concisely. The code will be well documented. Particular care will be taken to design the software modularly to ensure that maintenance is easy.
+\subsection{Portability}
+This software will be designed to run on any operating system that contains a python compiler.
+
